@@ -1,0 +1,27 @@
+body.login-page{height:100dvh;overflow:hidden}
+.pg-login{flex:1;min-height:0}
+.pg-login .split{display:grid;grid-template-columns:1fr 1fr;height:100%;min-height:0}
+.pg-login .art{position:relative;overflow:hidden;color:#fff;background:var(--hg);padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.pg-login .art::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:112px 28px}
+.pg-login .art>*{position:relative}
+.pg-login .orb{position:absolute!important;border-radius:50%;filter:blur(40px);background:#fff;opacity:.22;animation:phd 9s ease-in-out infinite}
+.pg-login .o1{width:240px;height:240px;inset-block-start:-60px;inset-inline-end:-40px}.pg-login .o2{width:200px;height:200px;inset-block-end:-50px;inset-inline-start:10%;animation-delay:-4s}
+.pg-login .art ul{margin-block-start:2rem;display:grid;gap:1rem;font-weight:600;font-size:1.05rem}
+.pg-login .art li{opacity:0;animation:rise .7s both;animation-delay:var(--d)}
+.pg-login .art li::before{content:"✓";display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.25);margin-inline-end:.7rem}
+.pg-login .formwrap{display:grid;place-items:center;padding:1.5rem;overflow:auto}
+.pg-login form{width:min(100%,420px);display:grid;gap:1.1rem;animation:rise .8s both}
+.pg-login h2{font:800 2rem "Bricolage Grotesque",sans-serif}
+.pg-login label{display:grid;gap:.35rem;font-weight:600;font-size:.9rem}
+.pg-login input{height:50px;width:100%;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding-inline:1rem;font:inherit;transition:border-color .2s,box-shadow .2s}
+.pg-login input:focus{outline:0;border-color:var(--violet);box-shadow:0 0 0 4px color-mix(in srgb,var(--violet) 22%,transparent)}
+.pg-login .pw{position:relative}.pg-login .eye{position:absolute;inset-inline-end:.9rem;top:50%;transform:translateY(-50%);background:none;border:0;font-weight:700;color:var(--violet);font-size:.85rem}
+.pg-login .row2{display:flex;justify-content:space-between;font-size:.9rem;color:var(--muted)}
+.pg-login .row2 a{color:var(--violet);font-weight:600}
+.pg-login .err{color:#D6336C;font-weight:600;min-height:1.4em;font-size:.9rem}
+.pg-login .go{height:52px;width:100%;justify-content:center;border:0;font-family:inherit}
+.pg-login .hint{font-size:.85rem;color:var(--muted);text-align:center}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@media (max-height:700px){.pg-login form{gap:.7rem}.pg-login .art ul{gap:.6rem;margin-block-start:1rem}}
+@media (max-width:860px){.pg-login .split{grid-template-columns:1fr}.pg-login .art{display:none}}
