@@ -127,3 +127,23 @@
 .trow{grid-template-columns:140px 1fr}
 .trow .tph{width:140px;height:100px;object-fit:cover;border-radius:14px;display:block}
 @media (max-width:480px){.trow{grid-template-columns:1fr}.trow .tph{width:100%;height:auto;aspect-ratio:3/2}}
+
+/* video heroes that show the whole frame */
+.ph.vsplit{background:#0B2B29;color:#fff;border:0}
+.ph.vsplit::before,.ph.vsplit::after{display:none}
+.ph.vsplit .wrap{display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:3rem;align-items:center;padding-block:3.5rem}
+.ph.vsplit .eyebrow{color:#FCD34D}.ph.vsplit .h-title{color:#fff}.ph.vsplit p{color:#E4F5F2}
+.ph.vsplit .vframe{width:100%;margin:0;border-color:rgba(255,255,255,.25)}
+.ph.vcenter .wrap{padding-block-end:3.5rem}
+.ph.vcenter .vframe{max-width:860px;margin:2.2rem auto 0}
+@media (max-width:860px){.ph.vsplit .wrap{grid-template-columns:1fr;gap:1.5rem;padding-block:2.5rem}}
+
+/* video banners: fill the full width, scale with the screen */
+.ph.vhero{min-height:clamp(320px,30vw,440px);padding:0}
+.ph.vhero .vbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1!important}
+.ph.vhero::after{background:linear-gradient(90deg,rgba(11,43,41,.8) 0%,rgba(11,43,41,.45) 45%,rgba(11,43,41,.05) 100%)}
+.ph.vhero.center::after{background:rgba(11,43,41,.42)}
+.ph.vhero .wrap{position:relative;z-index:1;padding-block:clamp(2.5rem,6vw,4.5rem)}
+.ph.vhero .vtoggle{z-index:3}
+@media (max-width:700px){.ph.vhero::after{background:rgba(11,43,41,.55)}}
+.ph.vhero.center::after{background:rgba(11,43,41,.52)}

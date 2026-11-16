@@ -45,6 +45,6 @@ vs.forEach(v=>o.observe(v))})();
 document.querySelectorAll('[style*="assets/img/"]').forEach(e=>{[...e.getAttribute("style").matchAll(/--(\w+):url\(assets\/img\/([\w-]+)\.jpg\)/g)].forEach(m=>e.style.setProperty("--"+m[1],`url(${new URL(img(m[2]),document.baseURI).href})`))});
 
 /* play/pause button on framed videos */
-document.querySelectorAll(".vframe").forEach(f=>{const v=f.querySelector("video"),b=document.createElement("button"),P='<svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>',L='<svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg>';
+document.querySelectorAll(".vframe,.vhero").forEach(f=>{const v=f.querySelector("video"),b=document.createElement("button"),P='<svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>',L='<svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg>';
 b.className="vtoggle";b.type="button";b.innerHTML=P;b.setAttribute("aria-label","Pause video");
 b.onclick=()=>{if(v.paused){v.dataset.hold="";v.play().catch(()=>{});b.innerHTML=P;b.setAttribute("aria-label","Pause video")}else{v.dataset.hold="1";v.pause();b.innerHTML=L;b.setAttribute("aria-label","Play video")}};f.append(b)});
