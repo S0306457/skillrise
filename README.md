@@ -22,6 +22,3 @@ Shared: `css/base.css` (header, footer, colours, buttons), `js/common.js`, `js/d
 Colours: primary deep teal #0F766E, secondary amber #F59E0B. Light mode is white/light grey, dark mode near-black grey.
 Logo: `assets/img/logo.png` (img) and `logo.svg` (favicon).
 The login accepts any email and a 4+ character password (demo). The dashboard keeps data in memory only.
-
-## Media note
-The photos and videos supplied are iStock preview files and carry a watermark. Replace them with licensed, watermark-free versions (same filenames in assets/img and assets/video) before launch.
