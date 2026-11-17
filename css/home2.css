@@ -151,3 +151,5 @@
 .h2 .skill.photo:hover::before,.h2 .skill.photo:active::before{transform:scale(1.1)}
 .h2 .skill.photo p{color:#D9F3EF}.h2 .skill.photo .ic{color:#fff;border-color:rgba(255,255,255,.45)}
 .h2 .tphoto{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;margin-block-end:1rem}
+.h2 .trustgrid{grid-template-columns:repeat(auto-fit,minmax(96px,1fr))}
+.h2 .tg b{font-size:clamp(1.4rem,6vw,2.6rem)}
